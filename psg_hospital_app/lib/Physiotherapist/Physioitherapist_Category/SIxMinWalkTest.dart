@@ -1941,7 +1941,7 @@ class _SixMinWalkTestState extends State<SixMinWalkTest> {
                         if (jsonDecode(value)["result"] == "SUCCESS") {
                           Navigator.pop(context);
                         } else {
-                          Scaffold.of(context).showSnackBar(const SnackBar(
+                          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                             content: Text(
                               "Failed to add data",
                               textAlign: TextAlign.center,

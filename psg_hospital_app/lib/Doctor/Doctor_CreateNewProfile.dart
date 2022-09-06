@@ -338,7 +338,7 @@ class _CreateNewPatient_InfoState extends State<CreateNewPatient_Info> {
                                       builder: (context) => AddDeleteEdit()),
                                 );
                               } else {
-                                Scaffold.of(context)
+                                ScaffoldMessenger.of(context)
                                     .showSnackBar(const SnackBar(
                                   content: Text(
                                     "Failed to Create Profile",
