@@ -184,17 +184,20 @@ class _HomeState extends State<Home> {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
-                        "PSG Hospitals",
-                        style: GoogleFonts.poppins(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500,
-                        ),
+                      Flexible(
+                        child: Text(
+                          "PSG College of Technology",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )
                       ),
                       Flexible(
                         child: Text(
-                          "DEPARTMENT OF CARDIOLOGY",
+                          "DEPARTMENT OF EEE",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.poppins(
                             color: Colors.white,
@@ -203,17 +206,20 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
-                      Flexible(
-                        child: Text(
-                          "DEPARTMENT OF PHYSICAL MEDICINE & REHABILITATION",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontSize: 13,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ),
+
+                      // Extra text removed
+                      // Flexible(
+                      //   child: Text(
+                      //     "DEPARTMENT OF PHYSICAL MEDICINE & REHABILITATION",
+                      //     textAlign: TextAlign.center,
+                      //     style: GoogleFonts.poppins(
+                      //       color: Colors.white,
+                      //       fontSize: 13,
+                      //       fontWeight: FontWeight.w500,
+                      //     ),
+                      //   ),
+                      // ),
+
                     ],
                   ),
                 ],
@@ -330,7 +336,7 @@ class _HomeState extends State<Home> {
                           ),
                           child: Center(
                             child: Text(
-                              "Physiotherapist's Login",
+                              "Patient's Login",
                               style: GoogleFonts.poppins(
                                 color: Colors.white,
                                 fontSize: 15,
@@ -356,6 +362,7 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Hero(
+                          //TODO: need to change tag and check there is no problem
                           tag: "dietitian",
                           child: Container(
                             height: 100,
@@ -390,7 +397,7 @@ class _HomeState extends State<Home> {
                           ),
                           child: Center(
                             child: Text(
-                              "Dietitian's Login",
+                              "Care Taker's Login",
                               style: GoogleFonts.poppins(
                                 color: Colors.white,
                                 fontSize: 15,
@@ -405,66 +412,68 @@ class _HomeState extends State<Home> {
                   const SizedBox(
                     height: 15.0,
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Consellor_Login()));
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Hero(
-                          tag: "Counsellor",
-                          child: Container(
-                            height: 100,
-                            width: 150,
-                            decoration: const BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.only(
-                                    bottomLeft: Radius.circular(10.0),
-                                    topLeft: Radius.circular(10.0)),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.black26,
-                                    offset: Offset(0.0, 1.0), //(x,y)
-                                    blurRadius: 15.0,
-                                  ),
-                                ],
-                                image: DecorationImage(
-                                  image: AssetImage("Assets/Counsellor.jpg"),
-                                  fit: BoxFit.cover,
-                                )),
-                          ),
-                        ),
-                        //Color(0xff4A64FE)
-                        Container(
-                          height: 100,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade200.withOpacity(0.5),
-                            borderRadius: const BorderRadius.only(
-                                bottomRight: Radius.circular(10.0),
-                                topRight: Radius.circular(10.0)),
-                          ),
-                          child: Center(
-                            child: Text(
-                              "Counsellor's Login",
-                              style: GoogleFonts.poppins(
-                                color: Colors.white,
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 15.0,
-                  ),
+
+                  // counsellor's login
+                  // GestureDetector(
+                  //   onTap: () {
+                  //     Navigator.push(
+                  //         context,
+                  //         MaterialPageRoute(
+                  //             builder: (context) => Consellor_Login()));
+                  //   },
+                  //   child: Row(
+                  //     mainAxisAlignment: MainAxisAlignment.center,
+                  //     children: [
+                  //       Hero(
+                  //         tag: "Counsellor",
+                  //         child: Container(
+                  //           height: 100,
+                  //           width: 150,
+                  //           decoration: const BoxDecoration(
+                  //               color: Colors.white,
+                  //               borderRadius: BorderRadius.only(
+                  //                   bottomLeft: Radius.circular(10.0),
+                  //                   topLeft: Radius.circular(10.0)),
+                  //               boxShadow: [
+                  //                 BoxShadow(
+                  //                   color: Colors.black26,
+                  //                   offset: Offset(0.0, 1.0), //(x,y)
+                  //                   blurRadius: 15.0,
+                  //                 ),
+                  //               ],
+                  //               image: DecorationImage(
+                  //                 image: AssetImage("Assets/Counsellor.jpg"),
+                  //                 fit: BoxFit.cover,
+                  //               )),
+                  //         ),
+                  //       ),
+                  //       //Color(0xff4A64FE)
+                  //       Container(
+                  //         height: 100,
+                  //         width: 200,
+                  //         decoration: BoxDecoration(
+                  //           color: Colors.grey.shade200.withOpacity(0.5),
+                  //           borderRadius: const BorderRadius.only(
+                  //               bottomRight: Radius.circular(10.0),
+                  //               topRight: Radius.circular(10.0)),
+                  //         ),
+                  //         child: Center(
+                  //           child: Text(
+                  //             "Counsellor's Login",
+                  //             style: GoogleFonts.poppins(
+                  //               color: Colors.white,
+                  //               fontSize: 15,
+                  //               fontWeight: FontWeight.w500,
+                  //             ),
+                  //           ),
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
+                  // const SizedBox(
+                  //   height: 15.0,
+                  // ),
                 ],
               ),
             ),

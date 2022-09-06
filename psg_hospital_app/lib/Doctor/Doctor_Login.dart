@@ -174,19 +174,26 @@ class _Doctor_LoginState extends State<Doctor_Login> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Doctor_Upload login = new Doctor_Upload();
-                    login.Doctor_Auth({
-                      "userid": uname.text.trim(),
-                      "pwd": pwd.text.trim()
-                    }).then((value) {
-                      if (jsonDecode(value)["result"] == "SUCCESS") {
-                        print(jsonDecode(value)["result"]);
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const Doctor_HomePage()));
-                      }
-                    });
+
+                    // TODO: this line is need to modify in doctor_uplaad.dart
+                    // Doctor_Upload login = new Doctor_Upload();
+                    // login.Doctor_Auth({
+                    //   "userid": uname.text.trim(),
+                    //   "pwd": pwd.text.trim()
+                    // }).then((value) {
+                    //   if (jsonDecode(value)["result"] == "SUCCESS") {
+                    //     print(jsonDecode(value)["result"]);
+                    //     Navigator.push(
+                    //         context,
+                    //         MaterialPageRoute(
+                    //             builder: (context) => const Doctor_HomePage()));
+                    //   }
+                    // }
+                    // );
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Doctor_HomePage()));
                   },
                   child: Padding(
                     padding: const EdgeInsets.only(left: 30.0, right: 30.0),

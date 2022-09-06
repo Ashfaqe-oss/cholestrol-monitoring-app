@@ -24,9 +24,9 @@ class _CreateNewPatient_InfoState extends State<CreateNewPatient_Info> {
   var randomnum = Random();
   final List<String> Gender = ['Male', 'Female', 'Transgender'];
   final List<String> Ward = [
-    "Special Ward",
-    "General Ward",
-    "Semi-Private Ward"
+    "High",
+    "Medium",
+    "Low"
   ];
   String curr_ward = "";
   TextEditingController dateinput = TextEditingController();
@@ -220,7 +220,7 @@ class _CreateNewPatient_InfoState extends State<CreateNewPatient_Info> {
                                   borderSide: const BorderSide(
                                       color: Color(0xff4A64FE)),
                                 ),
-                                labelText: "Ward",
+                                labelText: "Cholestrol Level",
                                 prefixIcon: const Icon(
                                   Icons.arrow_right,
                                   size: 20,
@@ -244,8 +244,8 @@ class _CreateNewPatient_InfoState extends State<CreateNewPatient_Info> {
                             const SizedBox(
                               height: 10.0,
                             ),
-                            curr_ward == "Special Ward" ||
-                                    curr_ward == "Semi-Private Ward"
+                            curr_ward == "Medium" ||
+                                    curr_ward == "Low"
                                 ? TextFieldWidget_M(
                                     onChanged: () {},
                                     Num_Lines: 1,
