@@ -351,7 +351,7 @@ class _BloodPressureState extends State<BloodPressure> {
                                 children: [
                                   Padding(
                                     padding: EdgeInsets.all(8.0),
-                                    child: RaisedButton(
+                                    child: ElevatedButton(
                                         child: Text("Camera"),
                                         onPressed: () {
                                           getImagefromGallery(0);
@@ -359,7 +359,7 @@ class _BloodPressureState extends State<BloodPressure> {
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(8.0),
-                                    child: RaisedButton(
+                                    child: ElevatedButton(
                                         child: Text("Gallery"),
                                         onPressed: () {
                                           getImagefromGallery(1);
@@ -1022,7 +1022,7 @@ class _BloodPressureState extends State<BloodPressure> {
                               if (jsonDecode(value)["result"] == "SUCCESS") {
                                 Navigator.pop(context);
                               } else {
-                                Scaffold.of(context)
+                                ScaffoldMessenger.of(context)
                                     .showSnackBar(const SnackBar(
                                   content: Text(
                                     "Failed to add data",

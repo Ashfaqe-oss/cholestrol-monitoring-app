@@ -662,7 +662,7 @@ class _Day4State extends State<Day4> {
                               if (jsonDecode(value)["result"] == "SUCCESS") {
                                 Navigator.pop(context);
                               } else {
-                                Scaffold.of(context)
+                                ScaffoldMessenger.of(context)
                                     .showSnackBar(const SnackBar(
                                   content: Text(
                                     "Failed to add data",
